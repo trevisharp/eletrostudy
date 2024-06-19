@@ -48,7 +48,8 @@ public class Charge(int eletrons, float x0, float y0)
                 var ux = dx / mod;
                 var uy = dy / mod;
 
-                var f = f0 * c2.Coulomb / r;
+                var zoomFactor = 100 * 100;
+                var f = zoomFactor * f0 * c2.Coulomb / r;
 
                 c1.Dx += ux * f * dt / c1.Mass;
                 c1.Dy += uy * f * dt / c1.Mass;
